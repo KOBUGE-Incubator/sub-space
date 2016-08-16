@@ -21,6 +21,7 @@ var level_reached = [0]
 var level
 
 onready var tween = get_node("tween")
+onready var timer = get_node("timer")
 
 func _ready():
 	level = instance_level(level_reached)
@@ -106,12 +107,16 @@ func zoom(zoom_in, player, target_pos, new_level):
 	var old_level = level
 	level = new_level
 	
-	yield(get_tree().create_timer(min(opacity_transition_time, transition_time)), "timeout")
+	timer.set_wait_time(min(opacity_transition_time, transition_time))
+	timer.start()
+	yield(timer, "timeout")
 	
 	player.unfreeze(true)
 	
 	if abs(opacity_transition_time - transition_time) > 0:
-		yield(get_tree().create_timer(abs(opacity_transition_time - transition_time)), "timeout")
+		timer.set_wait_time(abs(opacity_transition_time - transition_time))
+		timer.start()
+		yield(timer, "timeout")
 	
 	old_level.queue_free()
 
