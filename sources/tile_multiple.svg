@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="tile_multiple.svg"
+   inkscape:export-filename="/home/bobo/Projects/godot-projects/SubSpace/graphics/tile-multiple.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient4791"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#2fc67a;stop-opacity:1;"
+         offset="0"
+         id="stop4793" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4781"
+       osb:paint="solid"
+       gradientTransform="translate(0,924.36216)">
+      <stop
+         style="stop-color:#cc29bd;stop-opacity:1;"
+         offset="0"
+         id="stop4783" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4771"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#42bcde;stop-opacity:1;"
+         offset="0"
+         id="stop4773" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4761"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#fff800;stop-opacity:1;"
+         offset="0"
+         id="stop4763" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4751"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#ed8131;stop-opacity:1;"
+         offset="0"
+         id="stop4753" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4745"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#de2626;stop-opacity:1;"
+         offset="0"
+         id="stop4747" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4731"
+       osb:paint="solid"
+       gradientTransform="translate(512,5486.1726)">
+      <stop
+         style="stop-color:#c39229;stop-opacity:1;"
+         offset="0"
+         id="stop4733" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4709"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#87d511;stop-opacity:1;"
+         offset="0"
+         id="stop4711" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.9804514"
+     inkscape:cx="125.4461"
+     inkscape:cy="41.011934"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     units="px"
+     inkscape:snap-bbox="false"
+     inkscape:bbox-paths="false"
+     inkscape:bbox-nodes="true"
+     inkscape:object-nodes="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4705"
+       empspacing="4"
+       spacingx="2"
+       spacingy="2" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-924.36216)">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:url(#linearGradient4731);stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;"
+       id="rect6194"
+       width="128"
+       height="128"
+       x="0"
+       y="924.36218" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:url(#linearGradient4731);stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5420"
+       width="24"
+       height="24.000145"
+       x="148"
+       y="1026.3622"
+       inkscape:export-filename="/home/bobo/Projects/godot-projects/SubSpace/graphics/tile.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/bobo/Projects/godot-projects/SubSpace/graphics/tile.png"
+       y="1026.3622"
+       x="178"
+       height="25.999977"
+       width="24"
+       id="use5454"
+       style="fill:none;fill-opacity:1;stroke:url(#linearGradient4731);stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#rect5420"
+       id="use5488"
+       transform="translate(-148,-102)"
+       width="100%"
+       height="100%" />
+    <rect
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/bobo/Projects/godot-projects/SubSpace/graphics/tile.png"
+       y="1026.3622"
+       x="208"
+       height="27.999977"
+       width="24"
+       id="rect5490"
+       style="fill:none;fill-opacity:1;stroke:url(#linearGradient4731);stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use5454"
+       id="use5496"
+       transform="translate(-178,-23.999957)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#rect5420"
+       id="use5498"
+       transform="translate(-148,2)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use5454"
+       id="use5500"
+       transform="translate(-178,-77.999954)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#rect5490"
+       id="use5502"
+       transform="translate(-208,-51.999885)"
+       width="100%"
+       height="100%" />
+    <use
+       height="100%"
+       width="100%"
+       transform="translate(-44,-102)"
+       id="use5504"
+       xlink:href="#rect5420"
+       y="0"
+       x="0" />
+    <use
+       height="100%"
+       width="100%"
+       transform="translate(-74,-23.99996)"
+       id="use5506"
+       xlink:href="#use5454"
+       y="0"
+       x="0" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#rect5420"
+       id="use5508"
+       transform="translate(-44,1.9999774)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#rect5490"
+       id="use5510"
+       transform="translate(-104,-51.999908)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use5454"
+       id="use5512"
+       transform="translate(-74,-77.999977)"
+       width="100%"
+       height="100%" />
+    <use
+       height="100%"
+       width="100%"
+       transform="matrix(0,1,-1,0,1076.3622,746.36216)"
+       id="use5526"
+       xlink:href="#use5454"
+       y="0"
+       x="0" />
+    <use
+       height="100%"
+       width="100%"
+       transform="matrix(0,1,-1,0,1130.3622,746.36216)"
+       id="use5528"
+       xlink:href="#use5454"
+       y="0"
+       x="0" />
+    <use
+       height="100%"
+       width="100%"
+       transform="matrix(0,1,-1,0,1104.3621,716.36216)"
+       id="use5530"
+       xlink:href="#rect5490"
+       y="0"
+       x="0" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use5454"
+       id="use5532"
+       transform="matrix(0,1,-1,0,1076.3622,850.36216)"
+       width="100%"
+       height="100%" />
+    <use
+       height="100%"
+       width="100%"
+       transform="matrix(0,1,-1,0,1104.3621,820.36216)"
+       id="use5534"
+       xlink:href="#rect5490"
+       y="0"
+       x="0" />
+    <use
+       height="100%"
+       width="100%"
+       transform="matrix(0,1,-1,0,1130.3622,850.36216)"
+       id="use5536"
+       xlink:href="#use5454"
+       y="0"
+       x="0" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:url(#linearGradient4731);stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5554"
+       width="26"
+       height="26"
+       x="148"
+       y="994.36218" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:url(#linearGradient4731);stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5566"
+       width="28"
+       height="28"
+       x="180"
+       y="992.36218" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:url(#linearGradient4731);stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5578"
+       width="24"
+       height="24"
+       x="214"
+       y="996.36218" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#rect5578"
+       id="use5582" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#rect5566"
+       id="use5586"
+       transform="translate(-130,-18.000023)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#rect5554"
+       id="use5588"
+       transform="translate(-70,7.9999774)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use5588"
+       id="use5590"
+       transform="translate(0,-54)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use5590"
+       id="use5592"
+       transform="translate(-54,1.7187404e-8)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use5592"
+       id="use5594"
+       transform="translate(0,54)"
+       width="100%"
+       height="100%" />
+  </g>
+</svg>
