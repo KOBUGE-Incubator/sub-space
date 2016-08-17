@@ -1,8 +1,9 @@
-[gd_resource type="TileSet" load_steps=4 format=1]
+[gd_resource type="TileSet" load_steps=5 format=1]
 
 [ext_resource path="res://graphics/tile.png" type="Texture" id=1]
 [ext_resource path="res://graphics/tile-multiple.png" type="Texture" id=2]
 [ext_resource path="res://graphics/wall.png" type="Texture" id=3]
+[ext_resource path="res://graphics/tile-same-dir.png" type="Texture" id=4]
 
 [resource]
 
@@ -30,4 +31,12 @@
 2/navigation_offset = Vector2( 64, 64 )
 2/shape_offset = Vector2( 0, 0 )
 2/shapes = [  ]
+3/name = "samedir"
+3/texture = ExtResource( 4 )
+3/tex_offset = Vector2( 0, 0 )
+3/region = Rect2( 0, 0, 128, 128 )
+3/occluder_offset = Vector2( 64, 64 )
+3/navigation_offset = Vector2( 64, 64 )
+3/shape_offset = Vector2( 0, 0 )
+3/shapes = [  ]
 
