@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://levels/base_level.tscn" type="PackedScene" id=1]
+
+[node name="level_multichoice_left" instance=ExtResource( 1 )]
+
+tile_data = IntArray( 0, 0, 1, 0, 2, 0, 3, 2, 4, 0, 65536, 0, 65537, 2, 65538, 3, 65539, 0, 65540, 0, 131072, 3, 131073, 3, 131074, 0, 131075, 2, 131076, 0, 196608, 0, 196609, 0, 196610, 3, 196611, 0, 196612, 0, 262144, 0, 262145, 2, 262146, 0, 262147, 2, 262148, 0 )
+
+

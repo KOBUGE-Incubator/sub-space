@@ -37,40 +37,13 @@ func can_move_to_pos(pos, _level = level):
 	var tile = get_tile_at_pos(pos, _level)
 	return tile != TILE_WALL
 
-func apply_action_of_pos(pos, movement, player, _level = level, _trans_path = "./", _trans_positions = null):
+func apply_action_of_pos(pos, movement, player, _level = level, _trans_path = ".", _trans_positions = null):
+	if _trans_positions == null: _trans_positions = [pos - movement]
+	
 	var pretile = get_tile_at_pos(pos - movement, _level)
 	var tile = get_tile_at_pos(pos, _level)
 	if tile == TILE_WALL:
 		return false
-	
-	if tile == TILE_OUTZOOM:
-		var current_path = simplify_path(level_reached_path.plus_file(_trans_path))
-		_trans_path = _trans_path.plus_file("..")
-		var new_level_path = simplify_path(level_reached_path.plus_file(_trans_path))
-		var new_level = instance_level(new_level_path)
-		if !new_level:
-			return null
-		
-		var target_pos = get_zoom_in_tile_pos_with_id(int(current_path.get_file()), new_level) + movement
-		
-		if _trans_positions == null: _trans_positions = []
-		_trans_positions.push_back(target_pos)
-		
-		return apply_action_of_pos(target_pos, movement, player, new_level, _trans_path, _trans_positions)
-		
-	if tile == TILE_ZOOM:
-		_trans_path = _trans_path.plus_file(str(get_zoom_in_tile_id_at(pos, _level)))
-		var new_level_path = simplify_path(level_reached_path.plus_file(_trans_path))
-		var new_level = instance_level(new_level_path)
-		if !new_level:
-			return null
-		
-		var target_pos = level_offset * -movement
-		
-		if _trans_positions == null: _trans_positions = []
-		_trans_positions.push_back(target_pos)
-		
-		return apply_action_of_pos(target_pos, movement, player, new_level, _trans_path, _trans_positions)
 	
 	var c_last_movement = last_movement
 	if tile == TILE_SAME_DIR:
@@ -81,17 +54,62 @@ func apply_action_of_pos(pos, movement, player, _level = level, _trans_path = ".
 			last_movement = c_last_movement
 			return false
 	
-	if _trans_path != "./":
+	if tile == TILE_OUTZOOM:
+		var current_path = simplify_path(level_reached_path.plus_file(_trans_path))
+		_trans_path = _trans_path.plus_file("..")
+		var new_level_path = simplify_path(level_reached_path.plus_file(_trans_path))
+		var new_level = instance_level(new_level_path)
+		if new_level:
+			var target_pos = get_zoom_in_tile_pos_with_id(int(current_path.get_file()), new_level) + movement
+			
+			_trans_positions.push_back(target_pos)
+			
+			return apply_action_of_pos(target_pos, movement, player, new_level, _trans_path, _trans_positions)
+		else:
+			_trans_path = _trans_path.get_base_dir()
+	
+	if tile == TILE_ZOOM:
+		_trans_path = _trans_path.plus_file(str(get_zoom_in_tile_id_at(pos, _level)))
+		var new_level_path = simplify_path(level_reached_path.plus_file(_trans_path))
+		var new_level = instance_level(new_level_path)
+		if new_level:
+			var target_pos = level_offset * -movement
+			
+			var path = _trans_path.split("/")
+			var n = 0
+			var i = 0
+			var peak = 0
+			while i < path.size() and (path[i] == "." or path[i] == ""): i += 1
+			while i < path.size() and path[i] == "..":
+				i += 1
+				n += 1
+			peak = n
+			while i < path.size() and path[i] != ".." and n > 0:
+				i += 1
+				n -= 1
+			
+			if n == 0 and peak > 0:
+				target_pos = _trans_positions[peak-1] - level_offset * 2 * movement
+			
+			_trans_positions.push_back(target_pos)
+			
+			return apply_action_of_pos(target_pos, movement, player, new_level, _trans_path, _trans_positions)
+		else:
+			_trans_path = _trans_path.get_base_dir()
+	
+	if _trans_path != ".":
 		#anim
 		transition(_trans_path, player, movement, _trans_positions, level_reached_path)
 		level_reached_path = simplify_path(level_reached_path.plus_file(_trans_path))
 		return pos
 	return null
 
-func transition(path, player, movement, target_positions, current_path = level_reached_path):
+func transition(path, player, movement, target_positions = [], current_path = level_reached_path):
 	path = Array(path.split("/"))
 	
-	while !path.empty() and (path[0] == "." or path[0] == ""): path.pop_front()
+	while !path.empty() and (path[0] == "." or path[0] == ""):
+		path.pop_front()
+		target_positions.pop_front()
 	if path.empty(): return
 	
 	var animation_type = ANIM_ZOOM_IN
@@ -135,9 +153,6 @@ func transition(path, player, movement, target_positions, current_path = level_r
 	
 	if animation_type == ANIM_ZOOM_IN:
 		var zoom_world_pos = get_zoom_in_tile_pos_with_id(int(new_level_path.get_file()), level) * tile_size
-		print(zoom_world_pos, int(current_path.get_file()))
-#		tween.interpolate_property(level, "transform/pos", current_level_pos, (current_level_pos + zoom_world_pos) * level_size, transition_time, transition, easing)
-#		tween.interpolate_property(new_level, "transform/pos", new_level_pos / level_size - zoom_world_pos, new_level_pos, transition_time, transition, easing)
 		tween.interpolate_property(level, "transform/pos", current_level_pos, (current_level_pos - zoom_world_pos) * level_size, transition_time, transition, easing)
 		tween.interpolate_property(new_level, "transform/pos", new_level_pos / level_size + zoom_world_pos, new_level_pos, transition_time, transition, easing)
 		
@@ -174,7 +189,7 @@ func transition(path, player, movement, target_positions, current_path = level_r
 	
 	path.pop_front()
 	target_positions.pop_front()
-	transition(join_path(path, ""), player, target_positions, new_level_path)
+	transition(join_path(path, ""), player, movement, target_positions, new_level_path)
 	
 	player.unfreeze(true)
 	

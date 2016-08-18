@@ -17,7 +17,7 @@ opacity_transition_time = 0.9
 
 [node name="player" parent="level_container" instance=ExtResource( 2 )]
 
-transform/pos = Vector2( 0, -128 )
+transform/pos = Vector2( -256, -256 )
 
 [node name="tween" type="Tween" parent="level_container"]
 
